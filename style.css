@@ -1,10 +1,15 @@
+body {
+  font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+  width: 80%;
+  margin: auto;
+}
 ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
   background-color: var(--color-navbg);
-  position: -webkit-sticky; /* Safari */
+  position: -webkit-sticky;
   position: sticky;
   top: 0;
 }
@@ -22,11 +27,16 @@ li a {
 }
 
 li a:hover {
-  /*background-color: #111;*/
+  background-color: #111;
+  color: #ffffff
+}
+
+.theme-switch{
+  float: right;
 }
 
 .active {
-  /*background-color: #4CAF50;*/
+  background-color: #eba434;
 }
 h1 { color: var(--font-color); }
 
@@ -47,6 +57,54 @@ body {
   color: var(--font-color);
 }
 
+.onoffswitch {
+    float: right;
+    top: 6px;
+    position: relative; width: 90px;
+    -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+}
+.onoffswitch-checkbox {
+    display: none;
+}
+.onoffswitch-label {
+    display: block; overflow: hidden; cursor: pointer;
+    border: 2px solid #999999; border-radius: 20px;
+}
+.onoffswitch-inner {
+    display: block; width: 200%; margin-left: -100%;
+    transition: margin 0.3s ease-in 0s;
+}
+.onoffswitch-inner:before, .onoffswitch-inner:after {
+    display: block; float: left; width: 50%; height: 30px; padding: 0; line-height: 30px;
+    font-size: 14px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+    box-sizing: border-box;
+}
+.onoffswitch-inner:before {
+    content: "Light";
+    padding-left: 10px;
+    background-color: #D1D1D1; color: #000000;
+}
+.onoffswitch-inner:after {
+    content: "Dark";
+    padding-right: 10px;
+    background-color: #000000; color: #FFFFFF;
+    text-align: right;
+}
+.onoffswitch-switch {
+    display: block; width: 18px; margin: 6px;
+    background: #FFFFFF;
+    position: absolute; top: 0; bottom: 0;
+    right: 56px;
+    border: 2px solid #999999; border-radius: 20px;
+    transition: all 0.3s ease-in 0s;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+    margin-left: 0;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+    right: 0px;
+}
+
 .theme-light {
   --color-primary: #0060df;
   --color-secondary: #fbfbfe;
@@ -62,4 +120,8 @@ body {
   --font-color: #ffffff;
   --color-navbg: #ffffff;
   --color-link: #000000;
+}
+
+footer {
+  margin-top: 30px;
 }
