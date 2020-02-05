@@ -60,6 +60,7 @@ body {
 
 .onoffswitch {
     float: right;
+    right: 20%;
     top: 6px;
     position: relative; width: 90px;
     -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
